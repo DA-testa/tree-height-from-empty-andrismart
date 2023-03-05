@@ -41,7 +41,6 @@ def main():
             with open(filepath, "r") as f:
                 parents=np.array(list(map(int, f.readline().split())))
                 print(compute_height(n, parents))
-    pass
 
 
 # In Python, the default limit on recursion depth is rather low,
