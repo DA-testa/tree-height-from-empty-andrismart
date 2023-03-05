@@ -36,7 +36,6 @@ def main():
 
     if "F" in entry:
         filepath="test/"+input()
-        n=filepath.readline()
         if not "a" in filepath:
             with open(filepath, "r") as f:
                 parents=np.array(list(map(int, f.readline().split())))
