@@ -6,7 +6,7 @@ import numpy as np
 
 def compute_height(n, parents):
     max_height=0
-    current=np.zeros(n)
+    current=np.zeros(n, int)
     for x in range(n):
         height=0
         count=x
