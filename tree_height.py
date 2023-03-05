@@ -17,7 +17,7 @@ def compute_height(n, parents):
                 height+=current[count]
                 break
             count=parents[count]
-        current[count]=height
+        current[x]=height
 
     for y in range(n):
         if current[y]>max_height:
