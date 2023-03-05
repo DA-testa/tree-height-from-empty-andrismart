@@ -1,4 +1,3 @@
-# python3
 import sys
 import threading
 import numpy as np
@@ -6,7 +5,7 @@ import numpy as np
 
 def compute_height(n, parents):
     max_height=0
-    current=np.zeros(n, int)
+    current=np.zeros(n)
     for x in range(n):
         height=0
         count=x
@@ -27,7 +26,6 @@ def compute_height(n, parents):
 
 
 def main():
-    global n
     entry=input()
     if "I" in entry:
         n=int(input())
@@ -36,8 +34,10 @@ def main():
 
     if "F" in entry:
         filepath="test/"+input()
+
         if not "a" in filepath:
             with open(filepath, "r") as f:
+                n=int(f.readline().strip())
                 parents=np.array(list(map(int, f.readline().split())))
                 print(compute_height(n, parents))
 
