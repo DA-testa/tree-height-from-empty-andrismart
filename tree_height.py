@@ -27,6 +27,7 @@ def compute_height(n, parents):
 
 
 def main():
+    global n
     entry=input()
     if "I" in entry:
         n=int(input())
