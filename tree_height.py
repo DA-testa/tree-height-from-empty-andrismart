@@ -35,7 +35,8 @@ def main():
         print(compute_height(n, parents))
 
     if "F" in entry:
-        filepath="test/"+input().readline()
+        filepath="test/"+input()
+        n=filepath.readline()
         if not "a" in filepath:
             with open(filepath, "r") as f:
                 parents=np.array(list(map(int, f.readline().split())))
